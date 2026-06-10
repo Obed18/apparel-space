@@ -520,3 +520,8 @@
   gap: 1rem;
   align-items: center;
 }
+@media (max-width: 480px) {
+  .nav-actions {
+    display: none;
+  }
+}
