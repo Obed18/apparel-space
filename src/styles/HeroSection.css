@@ -1,0 +1,184 @@
+:root {
+  --helene: "HeleneHess-Regular", fallback-1, fallback-2, fallback-3, serif;
+  --jost: "Jost", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial;
+  --accent: #d8b22a;
+}
+.hero-root * {
+  box-sizing: border-box;
+}
+
+.hero-root {
+  position: relative;
+  min-height: 100vh;
+  font-family: var(--jost);
+  color: #fff;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Video / media */
+.hero-media {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: block;
+}
+.hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.5) 8%,
+    rgba(0, 0, 0, 0.6) 60%
+  );
+}
+
+/* Content center */
+.hero-content {
+  position: relative;
+  z-index: 30;
+  height: calc(100vh - 74px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 24px;
+}
+.hero-title {
+  font-family: var(--helene);
+  font-size: 64px;
+  margin: 0;
+  color: var(--accent);
+  line-height: 1.03;
+}
+.hero-subtitle {
+  font-family: var(--helene);
+  font-size: 28px;
+  margin-top: 18px;
+  margin-bottom: 28px;
+  color: #fff;
+}
+
+.chev-btn {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  margin-top: 32px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1100px) {
+  .hero-title {
+    font-size: 48px;
+  }
+  .hero-subtitle {
+    font-size: 22px;
+  }
+  .hero-header {
+    padding: 12px 24px;
+  }
+}
+
+@media (max-width: 800px) {
+  .hero-title {
+    font-size: 34px;
+  }
+  .hero-subtitle {
+    font-size: 18px;
+  }
+  .hero-logo {
+    font-size: 28px;
+  }
+  .hero-right {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 26px;
+  }
+  .hero-subtitle {
+    font-size: 16px;
+  }
+  .hero-topbar {
+    font-size: 13px;
+    padding: 8px;
+  }
+}
+
+/* Accessibility focus */
+.icon-btn:focus,
+.lang-btn:focus,
+.chev-btn:focus,
+.book-btn:focus {
+  outline: 2px solid rgba(255, 255, 255, 0.12);
+  outline-offset: 2px;
+}
+
+.courier-actions {
+  display: flex;
+  gap: 1px;
+}
+.hero-btn {
+  padding: 12px 30px !important;
+  background: transparent;
+  border: 1px solid #ffffff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+  border-radius: 0 !important;
+  font-size: 1.2rem;
+}
+.hero-green-btn {
+  background-color: #ffffff;
+  color: #000000;
+}
+.hero-outline-btn {
+  border: 1px solid #ffffff;
+}
+.hero-btn:hover {
+  background-color: #ffffff;
+  color: #000000;
+  transform: translateY(-2px);
+  border-radius: 0;
+  border: none;
+}
+
+.hero-outline-btn {
+  background: transparent;
+  color: #ffffff;
+}
+.hero-outline-btn:hover {
+  background-color: #000000;
+  color: #f0f0f0;
+  transform: translateY(-2px);
+}
+.hero-btn,
+.hero-outline-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 18px;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.hero-actions{
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}

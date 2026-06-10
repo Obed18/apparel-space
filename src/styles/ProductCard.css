@@ -1,0 +1,213 @@
+/* Root */
+
+.product-card-link {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Image Container */
+
+.product-card-image-wrapper {
+  position: relative;
+  overflow: hidden;
+  background: #f5f5f5;
+  aspect-ratio: 4 / 5;
+}
+
+/* Images */
+
+.product-card-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-card-image-primary {
+  transition: opacity 500ms ease;
+}
+
+.product-card-image-secondary {
+  transform: scale(1.05);
+  opacity: 0;
+  transition:
+    opacity 700ms ease,
+    transform 700ms ease;
+}
+
+.product-card-link:hover .product-card-image-primary {
+  opacity: 0;
+}
+
+.product-card-link:hover .product-card-image-secondary {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Sale Badge */
+
+.product-card-sale-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 10;
+
+  padding: 4px 10px;
+
+  background: #d4af37;
+  color: #000;
+
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+/* Wishlist Button */
+
+.product-card-wishlist-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 10;
+
+  width: 36px;
+  height: 36px;
+
+  display: grid;
+  place-items: center;
+
+  border: none;
+  border-radius: 9999px;
+
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.product-card-wishlist-btn:hover {
+  background: #ffffff;
+}
+
+/* Heart Icon */
+
+.product-card-heart {
+  width: 16px;
+  height: 16px;
+  transition: all 0.3s ease;
+}
+
+.product-card-heart-default {
+  color: #000000;
+}
+
+.product-card-heart-active {
+  color: #0066ff;
+  fill: #0066ff;
+}
+
+/* Quick Add Button */
+
+.product-card-quick-add {
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+
+  z-index: 10;
+
+  padding: 12px 0;
+
+  border: none;
+
+  background: #000000;
+  color: #ffffff;
+
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  opacity: 0;
+  transform: translateY(16px);
+
+  transition:
+    opacity 300ms ease,
+    transform 300ms ease,
+    background-color 300ms ease;
+}
+
+.product-card-quick-add:hover {
+  background: #0066ff;
+}
+
+.product-card-link:hover .product-card-quick-add {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Content */
+
+.product-card-content {
+  margin-top: 12px;
+}
+
+.product-card-content > * + * {
+  margin-top: 4px;
+}
+
+.product-card-category {
+  font-size: 11px;
+  color: #a3a3a3;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+.product-card-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: #000000;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.product-card-price {
+  font-size: 14px;
+  font-weight: 600;
+  color: #000000;
+  margin: 0;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .product-card-sale-badge {
+    top: 10px;
+    left: 10px;
+  }
+
+  .product-card-wishlist-btn {
+    top: 10px;
+    right: 10px;
+  }
+
+  .product-card-quick-add {
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+  }
+}
+
+@media (hover: none) {
+  .product-card-quick-add {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

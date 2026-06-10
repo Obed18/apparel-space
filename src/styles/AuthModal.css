@@ -1,0 +1,177 @@
+/* Overlay */
+
+.auth-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+/* Backdrop */
+
+.auth-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  cursor: pointer;
+}
+
+/* Modal */
+
+.auth-modal {
+  position: relative;
+  width: 100%;
+  max-width: 32rem;
+  background: #ffffff;
+  padding: 2rem;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+  z-index: 1;
+}
+
+/* Close Button */
+
+.auth-modal-close {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  background: transparent;
+  border: none;
+  color: #a3a3a3;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.auth-modal-close:hover {
+  color: #000000;
+}
+
+/* Heading */
+
+.auth-modal-title {
+  margin: 0;
+  font-size: 1.875rem;
+  line-height: 1.2;
+  color: #000;
+  font-family: serif;
+  font-weight: 400;
+}
+
+.auth-modal-subtitle {
+  margin-top: 0.25rem;
+  font-size: 0.875rem;
+  color: #737373;
+}
+
+/* Form */
+
+.auth-form {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Inputs */
+
+.auth-input {
+  width: 100%;
+  border: 1px solid #d4d4d4;
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  outline: none;
+  transition: border-color 0.2s ease;
+  background: #fff;
+}
+
+.auth-input:focus {
+  border-color: #000000;
+}
+
+/* Messages */
+
+.auth-error {
+  font-size: 0.875rem;
+  color: #ef4444;
+  margin: 0;
+}
+
+.auth-success {
+  font-size: 0.875rem;
+  color: #16a34a;
+  margin: 0;
+}
+
+/* Submit Button */
+
+.auth-submit-btn {
+  width: 100%;
+  border: none;
+  background: #000000;
+  color: #ffffff;
+  padding: 0.875rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.auth-submit-btn:hover:not(:disabled) {
+  background: #0066ff;
+}
+
+.auth-submit-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Footer */
+
+.auth-footer-text {
+  margin-top: 1.25rem;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #737373;
+}
+
+.auth-switch-btn {
+  background: transparent;
+  border: none;
+  padding: 0;
+  font-size: inherit;
+  font-weight: 500;
+  color: #000000;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .auth-modal {
+    padding: 1.5rem;
+  }
+
+  .auth-modal-title {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-modal {
+    padding: 1.25rem;
+  }
+
+  .auth-modal-title {
+    font-size: 1.5rem;
+  }
+
+  .auth-input {
+    padding: 0.75rem;
+  }
+}

@@ -1,0 +1,224 @@
+.footer {
+  background: #ffffff;
+  color: #1e1e1e;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+}
+
+/* TOP */
+.footer-top {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 50px 5%;
+}
+
+.footer-subscribe {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-subscribe h2 {
+  color: #000000;
+  font-size: 28px;
+}
+
+.footer-subscribe p {
+  margin-top: 6px;
+  color: #303030;
+}
+
+/* INPUT */
+.subscribe-box {
+  display: flex;
+  gap: 10px;
+}
+
+.subscribe-box input {
+  padding: 14px 16px;
+  border-radius: 10px;
+  border: none;
+  background: #dddede;
+  color: rgb(0, 0, 0);
+  width: 250px;
+}
+
+.subscribe-box button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 14px 20px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background-color: #000000;
+  color: white;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.subscribe-box button:hover {
+  transform: scale(1.05);
+}
+
+/* MAIN */
+.footer-main {
+  padding: 60px 5%;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+/* BRAND */
+.footer-brand p {
+  margin: 20px 0;
+  line-height: 1.6;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-icon {
+  padding: 10px;
+  border-radius: 10px;
+  color: rgb(0, 0, 0);
+}
+
+/* SOCIALS */
+.socials {
+  display: flex;
+  gap: 12px;
+}
+
+.socials a {
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  color: #000000;
+}
+
+.socials a:hover {
+  background: #2f2f2f;
+  color: rgb(0, 0, 0);
+}
+
+/* LINKS */
+.footer-links h4 {
+  color: rgb(0, 0, 0);
+  margin-bottom: 16px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-links li:hover {
+  color: #383838;
+}
+
+/* BOTTOM */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 1px 5%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-size: 14px;
+  color: #212121;
+  padding-bottom: 20px;
+}
+
+.footer-bottom span {
+  color: #292828;
+}
+
+.footer-legal {
+  display: flex;
+  gap: 20px;
+}
+
+/* SCROLL BUTTON */
+.scroll-top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background-color: #50b64d;
+  border: none;
+  padding: 14px;
+  border-radius: 50%;
+  cursor: pointer;
+  color: white;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  /* display: flex; */
+  align-items: center;
+  display: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-subscribe {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .subscribe-box {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .subscribe-box input {
+    width: 100%;
+  }
+
+  .subscribe-box button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}
+.clue-code{
+    color: #1490d9 !important;
+}
+.divider {
+    border: none;
+    height: 0.5px;
+    background-color: #7c7b7b;
+    margin-top: 1rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

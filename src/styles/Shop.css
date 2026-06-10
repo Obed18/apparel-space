@@ -1,0 +1,191 @@
+/* =========================
+   Hero Section
+========================= */
+
+.shop-hero {
+  background: #0a0a0a;
+  color: #ffffff;
+  padding-top: 7rem;
+  padding-bottom: 3rem;
+}
+
+.shop-container {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.shop-subtitle {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: #0066ff;
+}
+
+.shop-title {
+  margin-top: 0.75rem;
+  font-size: 3rem;
+  line-height: 1.1;
+  font-family: serif;
+  font-weight: 400;
+}
+
+/* =========================
+   Content
+========================= */
+
+.shop-content {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.shop-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.shop-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* =========================
+   Filter Buttons
+========================= */
+
+.filter-btn {
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  transition: all 0.3s ease;
+}
+
+.filter-btn-active {
+  background: #000000;
+  color: #ffffff;
+}
+
+.filter-btn-inactive {
+  background: #f5f5f5;
+  color: #525252;
+}
+
+.filter-btn-inactive:hover {
+  background: #e5e5e5;
+}
+
+/* =========================
+   Sort
+========================= */
+
+.shop-sort {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.shop-sort-icon {
+  width: 1rem;
+  height: 1rem;
+  color: #a3a3a3;
+}
+
+.shop-sort-select {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+/* =========================
+   Product Grid
+========================= */
+
+.shop-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 1.5rem;
+  row-gap: 2.5rem;
+}
+
+.loading-grid {
+  row-gap: 1.5rem;
+}
+
+.skeleton-card {
+  aspect-ratio: 4 / 5;
+  background: #f5f5f5;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.shop-empty {
+  text-align: center;
+  color: #a3a3a3;
+  padding: 5rem 0;
+}
+
+/* =========================
+   Animation
+========================= */
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (min-width: 1024px) {
+  .shop-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .shop-title {
+    font-size: 2.5rem;
+  }
+
+  .shop-toolbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .shop-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .shop-title {
+    font-size: 2rem;
+  }
+
+  .filter-btn {
+    padding: 0.45rem 0.8rem;
+    font-size: 0.7rem;
+  }
+}
