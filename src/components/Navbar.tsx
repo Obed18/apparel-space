@@ -212,6 +212,7 @@ const Navbar: React.FC = () => {
                 {navLinks}
 
                 <div className="mobile-actions">
+                  <div className="actions-all">
                   <button
                     type="button"
                     className="search-btn action-products"
@@ -225,6 +226,7 @@ const Navbar: React.FC = () => {
                   <button className="cart-btn action-products" type="button">
                     <ShoppingBag size={20} className="cart-icon" /> Cart
                   </button>
+                  </div>
                   <div className="profile-section">
                     <img src="/account.png" className="profile-img" alt="Profile" />
                     <div className="profile-details">

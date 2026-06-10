@@ -426,6 +426,16 @@
   color: #fff;
   font-weight: 500;
 }
+.actions-all{
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+.profile-section{
+  gap: 0.5rem;
+  display: flex;
+}
 
 .profile-img{
   height: 50px;
@@ -509,7 +519,7 @@
   border: none;
   color: #1a1a1a;
   flex-direction: row;
-  font-size: 0.95rem;
+  font-size: 1.2rem;
 }
 .transparent-btn{
   background-color: transparent;
