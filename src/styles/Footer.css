@@ -230,3 +230,10 @@
     align-items: center;
     justify-content: center;
 }
+@media (max-width: 900px) {
+  .footer-legal {
+    flex-direction: column;
+    gap: 10px;
+    text-align: left;
+  }
+}

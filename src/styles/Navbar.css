@@ -59,6 +59,11 @@
   align-items: center;
   height: 60px;
 }
+@media (max-width: 900px) {
+  .logo-circle {
+    height: 45px;
+  }
+}
 
 .courier-logo h1 {
   font-size: 18px;
@@ -184,7 +189,7 @@
     top: 0;
     right: 0;
     width: 80%;
-    max-width: 300px;
+    max-width: 400px;
     height: 100vh;
     background-color: white;
     box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1);
@@ -290,7 +295,7 @@
     display: none;
   }
   .logo-circle {
-    height: 62px;
+    height: 45px;
   }
 }
 
@@ -503,7 +508,8 @@
   outline: none;
   border: none;
   color: #1a1a1a;
-  flex-direction: column;
+  flex-direction: row;
+  font-size: 0.95rem;
 }
 .transparent-btn{
   background-color: transparent;
@@ -520,8 +526,19 @@
   gap: 1rem;
   align-items: center;
 }
-@media (max-width: 480px) {
+@media (max-width: 900px) {
   .nav-actions {
     display: none;
   }
+}
+.profile-name{
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #111;
+  margin: 0;
+}
+.profile-email{
+  font-size: 0.85rem;
+  color: #5f6368;
+  margin: 0;
 }

@@ -217,19 +217,19 @@ const Navbar: React.FC = () => {
                     className="search-btn action-products"
                     onClick={openSearch}
                   >
-                    <Search size={16} className="black-search-icon" /> Search
+                    <Search size={20} className="black-search-icon" /> Search
                   </button>
                   <button className="saved-btn action-products" type="button">
-                    <Heart size={16} className="saved-icon" /> Saved items
+                    <Heart size={20} className="saved-icon" /> Saved items
                   </button>
                   <button className="cart-btn action-products" type="button">
-                    <ShoppingBag size={16} className="cart-icon" /> Cart
+                    <ShoppingBag size={20} className="cart-icon" /> Cart
                   </button>
                   <div className="profile-section">
                     <img src="/account.png" className="profile-img" alt="Profile" />
                     <div className="profile-details">
-                      <h2 className="profile-name">Kwame Yeboah</h2>
-                      <p className="profile-email">kwameyeboah@gmail.com</p>
+                      <h2 className="profile-name">My Account</h2>
+                      <p className="profile-email">Log in to get started</p>
                     </div>
                   </div>
                 </div>
